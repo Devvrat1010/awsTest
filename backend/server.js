@@ -4,8 +4,10 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-app.get('/api', (req, res) => {
-    res.json({ message: 'Hello from server!' });
+app.get('/', (req, res) => {
+    const { msg } = req.query;
+
+    res.json({ message: 'Msg from server : ' + msg });
 });
 
 const PORT = process.env.PORT || 3001;
