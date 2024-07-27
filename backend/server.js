@@ -6,7 +6,6 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     const { msg } = req.query;
-
     res.json({ message: 'Msg from server : ' + msg });
 });
 
