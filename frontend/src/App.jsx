@@ -6,7 +6,7 @@ function App() {
     const [data, setData] = useState(null)
 
     const fetchData = () => {
-        fetch('http://65.2.121.87:3001/?msg=' + msg)
+        fetch('http://65.2.121.87/api?msg=' + msg)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
