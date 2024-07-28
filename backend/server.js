@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     const { msg } = req.query;
     res.json({ message: 'Msg from server : ' + msg });
 });
