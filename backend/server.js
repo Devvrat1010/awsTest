@@ -8,8 +8,16 @@ app.use(cors());
 // create a backend route to serve the index.html file with name in query 
 app.get('/api', (req, res) => {
     const { msg } = req.query;
-    res.json({ message: 'Msg from server : ' + msg });
+    // check for msg undefined
+    if (!msg) {
+        return res.json({ message: 'Msg from server : Hello World' });
+    }
+    else{
+        res.json({ message: 'Msg from server : ' + msg });
+    }
 });
+
+
 
 const PORT = process.env.PORT || 3001;
 
