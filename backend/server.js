@@ -17,6 +17,9 @@ app.get('/api', (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello Worldssss' });
+});
 
 
 const PORT = process.env.PORT || 3001;
